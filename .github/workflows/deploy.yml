@@ -47,13 +47,10 @@ jobs:
           host:     ${{ secrets.EC2_HOST }}
           username: ec2-user
           key:      ${{ secrets.EC2_SSH_KEY }}
+          request_pty: true
           script: |
-            pkill -f streamlit || true
-            sleep 2
-            setsid nohup streamlit run /home/ec2-user/dashboard.py \
-              --server.port 8501 \
-              --server.address 0.0.0.0 \
-              > /home/ec2-user/streamlit.log 2>&1 < /dev/null &
+            bash -c 'pkill -f streamlit; sleep 2; nohup streamlit run /home/ec2-user/dashboard.py --server.port 8501 --server.address 0.0.0.0 > /home/ec2-user/streamlit.log 2>&1 &' &
+            sleep 5
             echo "✅ Streamlit restarted"
 
   notify:
