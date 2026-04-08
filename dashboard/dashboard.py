@@ -1,5 +1,5 @@
 """
-# Global Partners Dashboard v2.0
+# Global Partners Dashboard v3.0
 Global Partners - Streamlit Dashboard 
 Phase 4: Business Intelligence Dashboard
 
