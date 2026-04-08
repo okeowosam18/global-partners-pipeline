@@ -1,6 +1,6 @@
 """
-# Global Partners Dashboard v1.0
-Global Partners - Streamlit Dashboard
+# Global Partners Dashboard v2.0
+Global Partners - Streamlit Dashboard 
 Phase 4: Business Intelligence Dashboard
 
 Reads from Athena (Gold layer) and visualizes all 6 metrics.
